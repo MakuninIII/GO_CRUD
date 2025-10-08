@@ -1,0 +1,36 @@
+### Получить JWT-токен
+GET http://localhost:8080/token
+
+### Получить все группы
+GET http://localhost:8080/bands
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk5MTgwOTYsInVzZXIiOiJ0ZXN0In0.tDoxZvdaTJYJ93s3NwUxZ0EBANRg0v0ET5W9H1tvVMs
+
+### Получить группу с фильтром по имени и стране
+GET http://localhost:8080/bands?name=Queen&country=UK&sort=-debut_year
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk5MTgwOTYsInVzZXIiOiJ0ZXN0In0.tDoxZvdaTJYJ93s3NwUxZ0EBANRg0v0ET5W9H1tvVMs
+
+### Добавить новую группу
+POST http://localhost:8080/bands
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk5MTgwOTYsInVzZXIiOiJ0ZXN0In0.tDoxZvdaTJYJ93s3NwUxZ0EBANRg0v0ET5W9H1tvVMs
+
+{
+  "name": "Queen",
+  "country": "UK",
+  "debut_year": 1970
+}
+
+### Обновить группу с id=1
+PUT http://localhost:8080/bands/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk5MTgwOTYsInVzZXIiOiJ0ZXN0In0.tDoxZvdaTJYJ93s3NwUxZ0EBANRg0v0ET5W9H1tvVMs
+
+{
+  "name": "Queen",
+  "country": "United Kingdom",
+  "debut_year": 1970
+}
+
+### Удалить группу с выбранным id
+DELETE http://localhost:8080/bands/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk5MTgwOTYsInVzZXIiOiJ0ZXN0In0.tDoxZvdaTJYJ93s3NwUxZ0EBANRg0v0ET5W9H1tvVMs
