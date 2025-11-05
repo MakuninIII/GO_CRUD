@@ -35,25 +35,6 @@ func CreateBand(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
 }
 
-// func GetBands(w http.ResponseWriter, r *http.Request) {
-//     rows, err := db.Query("SELECT id, name, country, debut_year FROM bands")
-//     if err != nil {
-//         http.Error(w, err.Error(), http.StatusInternalServerError)
-//         return
-//     }
-//     defer rows.Close()
-
-//	    var bands []structure.Band
-//	    for rows.Next() {
-//	        var band structure.Band
-//	        if err := rows.Scan(&band.ID, &band.Name, &band.Country, &band.Debut_Year); err != nil {
-//	            http.Error(w, err.Error(), http.StatusInternalServerError)
-//	            return
-//	        }
-//	        bands = append(bands, band)
-//	    }
-//	    json.NewEncoder(w).Encode(bands)
-//	}
 func GetBands(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
 	country := r.URL.Query().Get("country")

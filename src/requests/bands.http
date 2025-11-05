@@ -3,7 +3,7 @@ GET http://localhost:8080/token
 
 ### Получить все группы
 GET http://localhost:8080/bands
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTk5MTgwOTYsInVzZXIiOiJ0ZXN0In0.tDoxZvdaTJYJ93s3NwUxZ0EBANRg0v0ET5W9H1tvVMs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjA1MTYzOTcsInVzZXIiOiJ0ZXN0In0.I7kjuZKjhuvyj_f2tW16dLUcR9w1FncZA53ITkr-I_o
 
 ### Получить группу с фильтром по имени и стране
 GET http://localhost:8080/bands?name=Queen&country=UK&sort=-debut_year
